@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: student_grades_db
+    environment:
+      POSTGRES_DB: grades_db
+      POSTGRES_USER: grades_user
+      POSTGRES_PASSWORD: grades_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
