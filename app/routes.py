@@ -36,3 +36,7 @@ def students_more_than_3_twos():
 )
 def students_less_than_5_twos():
     return get_students_less_than_5_twos()
+
+@router.get("/healthcheck")
+def healthcheck():
+    return {"status": "ok"}
